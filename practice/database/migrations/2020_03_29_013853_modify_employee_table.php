@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateEmployeeTable extends Migration
+class ModifyEmployeeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,11 @@ class UpdateEmployeeTable extends Migration
     public function up()
     {
         Schema::table('employee', function (Blueprint $table) {
-            $table->string('email');
+            // name カラムの長さを32から50に変更します。
+            $table->string('name', 50)->change();
+
+            // nameカラムの後にint型でageカラムを追加。デフォルト値に0を指定。
+            $table->integer('age')->after('name')->default(0);
         });
     }
 
@@ -26,7 +30,8 @@ class UpdateEmployeeTable extends Migration
     public function down()
     {
         Schema::table('employee', function (Blueprint $table) {
-            $table->dropColumn('email');
+            $table->string('name',32)->change();
+            $table->dropColumn('age');
         });
     }
 }
