@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Folder;
-use Illuminate\Http\Request;
 use App\Http\Requests\CreateFolder;
+use Illuminate\Http\Request;
 
 class FolderController extends Controller
 {
@@ -22,6 +22,5 @@ class FolderController extends Controller
         return redirect()->route('tasks.index', [
             'id' => $folder->id,
         ]);
-
     }
 }
