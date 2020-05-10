@@ -21,11 +21,19 @@ class CreateTask extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function attributes()
     {
         return [
             'title' => 'タイトル',
             'due_date' => '期限日',
+        ];
+    }
+
+    public function rules()
+    {
+        return [
+            'title' => 'required|max:100',
+            'due_date' => 'required|date|after_or_equal:today',
         ];
     }
 
