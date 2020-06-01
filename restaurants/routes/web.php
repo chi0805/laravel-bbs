@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeControllder@index')->name('home');
+Route::get('/records/create', 'RecordController@getCreate')->name('records.create');
