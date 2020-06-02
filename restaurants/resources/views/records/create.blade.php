@@ -12,6 +12,8 @@
               <div class="form-group">
                 <label for="title">タイトル</label>
                 <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" />
+                <label for="message">感想</label>
+                <input type="textarea" class="form-control" name="message" id="message" value="{{ old('message') }}" />
               </div>
               <div class="text-right">
                 <button type="submit" class="btn btn-primary">送信</button>
