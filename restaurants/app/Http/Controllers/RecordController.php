@@ -9,11 +9,8 @@ class RecordController extends Controller
 {
     public function getCreate()
     {
-        $records = Record::all();
 
-        return view('records/create', [
-            'records' = $records,
-        ]);
+        return view('records/create');
     }
 
     public function postCreate(Request $request)

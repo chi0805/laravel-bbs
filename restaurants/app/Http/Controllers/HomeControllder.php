@@ -3,12 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Record;
 
 class HomeControllder extends Controller
 {
     public function index()
     {
-        return view('home');
+        $records = Record::all();
+
+        return view('home', [
+            'records' => $records,
+        ]);
     }
 
 }
