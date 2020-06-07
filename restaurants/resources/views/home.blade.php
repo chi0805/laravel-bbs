@@ -5,9 +5,9 @@
     <div class="row">
       <div class="col col-md-4">
         <nav class="panel panel-default">
-          <div class="panel-heading">フォルダ</div>
+          <div class="panel-heading">投稿</div>
           <div class="panel-body">
-            <a href="#" class="btn btn-default btn-block">
+            <a href="records/create" class="btn btn-default btn-block">
               投稿する
             </a>
           </div>
@@ -19,6 +19,9 @@
               >
                 {{ $record->title }}
               </a>
+              <div>
+                {{ $record->message}}
+              </div>
             @endforeach
           </div>
         </nav>
