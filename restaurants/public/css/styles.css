@@ -11,7 +11,7 @@ body {
 
 .my-navbar {
   align-items: center;
-  background: #F3EDE7;
+  background: #B09F8E;
   display: flex;
   height: 6rem;
   justify-content: space-between;
@@ -25,7 +25,7 @@ body {
 
 .my-navbar-brand,
 .my-navbar-item {
-  color: #BBA58E;
+  color: #fff;
 }
 
 a.my-navbar-brand:hover{
@@ -47,4 +47,9 @@ a.my-navbar-item:hover {
 .form-control[disabled],
 .form-control[readonly] {
   background-color: #fff;
+}
+
+.panel > .panel-heading {
+  background: #B09F8E;
+  color: #fff;
 }
