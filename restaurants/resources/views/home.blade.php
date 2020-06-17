@@ -7,9 +7,6 @@
         <nav class="panel panel-default">
           <div class="panel-heading">投稿</div>
           <div class="panel-body">
-            <a href="records/create" class="btn btn-default btn-block">
-              投稿する
-            </a>
           </div>
           <div class="card">
             @foreach($records as $record)

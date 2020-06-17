@@ -19,6 +19,8 @@ class RecordController extends Controller
 
         $record->title = $request->title;
         $record->message = $request->message;
+        $image_path = $request->file('image')->store('public/images');
+        $record->image = basename($image_path); 
 
         $record->save();
 
