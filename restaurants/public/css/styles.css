@@ -53,3 +53,7 @@ a.my-navbar-item:hover {
   background: #B09F8E;
   color: #fff;
 }
+
+.record-item {
+  width: 30%;
+}
