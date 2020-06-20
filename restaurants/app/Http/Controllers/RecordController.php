@@ -9,7 +9,6 @@ class RecordController extends Controller
 {
     public function getCreate()
     {
-
         return view('records/create');
     }
 
@@ -21,6 +20,7 @@ class RecordController extends Controller
         $record->message = $request->message;
         $image_path = $request->file('image')->store('public/images');
         $record->image = basename($image_path); 
+        $record->tags = $request->tags;
 
         $record->save();
 

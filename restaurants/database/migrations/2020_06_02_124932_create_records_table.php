@@ -18,6 +18,7 @@ class CreateRecordsTable extends Migration
             $table->string('title');
             $table->string('message');
             $table->string('image');
+            $table->string('tags');
             $table->timestamps();
         });
     }

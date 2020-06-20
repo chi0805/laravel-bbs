@@ -8,18 +8,21 @@
                     <div class="panel-heading">投稿</div>
                     <div class="panel-body">
                     </div>
-                    <div class="card-deck">
-                        @foreach($records as $record)
-                            <div class="card record-item">
-                                <img src="{{ asset('images/test.JPG') }}" class="card-img-top" alt="カードの画像" style="width:80%;">
-                                <div href="#" class="card-body">
-                                    <h5 class="card-title">{{ $record->title }}</h5>
-                                    <p class="card-text">
-                                      {{ $record->message }}
-                                    </p>
+                    <div class="record-list">
+                        <ul class="record-list-items">
+                            @foreach($records as $record)
+                                <li class="record-item">
+                                    <img src="{{ asset('storage/images/' . $record->image) }}" class="record-item-img" alt="カードの画像" style="width:80%;">
+                                    <div href="#" class="record-item-body">
+                                        <h5 class="card-title">{{ $record->title }}</h5>
+                                        <div class="record-item-tags">
+                                            @foreach($record->tags as $tag)
+                                                <a href="#">{{ $record->tag }}</a>
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
                     </div>
                 </nav>
             </div>
