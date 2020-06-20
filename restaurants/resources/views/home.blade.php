@@ -17,12 +17,13 @@
                                         <h5 class="card-title">{{ $record->title }}</h5>
                                         <div class="record-item-tags">
                                             @foreach($record->tags as $tag)
-                                                <a href="#">{{ $tag }}</a>
+                                                <a href="#">#{{ $tag }}</a>
                                             @endforeach
                                         </div>
                                     </div>
                                 </li>
                             @endforeach
+                        <div class="clear paginate">{{ $records->links() }}</div>
                     </div>
                 </nav>
             </div>
