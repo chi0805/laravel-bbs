@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Restaurants App</title>
     @yield('styles')
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
