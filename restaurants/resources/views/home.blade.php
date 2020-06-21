@@ -23,7 +23,7 @@
                                     </div>
                                 </li>
                             @endforeach
-                        <div class="clear paginate">{{ $records->links() }}</div>
+                        <div class="clear paginate">{{ $records->links('pagination::default') }}</div>
                     </div>
                 </nav>
             </div>

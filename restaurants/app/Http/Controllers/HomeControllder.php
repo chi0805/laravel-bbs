@@ -10,7 +10,7 @@ class HomeControllder extends Controller
     public function index()
     {
         $records = Record::all();
-        $records = Record::paginate(5);
+        $records = Record::paginate(4);
         foreach ($records as $record) {
             $tags = explode(',', $record->tags);
             $record->tags = $tags;

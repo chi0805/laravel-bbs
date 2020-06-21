@@ -98,3 +98,50 @@ a.my-navbar-item:hover {
     float: right;
     margin: 0 50px;
 }
+
+.paginationWrap {
+}
+
+.paginationWrap > .pagination > li > span,
+.paginationWrap > .pagination > li > a {
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-align:center;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.paginationWrap > .pagination > .pageNumber > a 
+.paginationWrap > .pagination > .pageNumber > span { 
+    background-color: #fff;
+}
+
+.paginationWrap > .pagination > .pagePrev > a,
+.paginationWrap > .pagination > .pagePrev > span,
+.paginationWrap > .pagination > .pageNext  > a,
+.paginationWrap > .pagination > .pageNext  > span {
+    background-color: #B0A08E;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+.paginationWrap > .pagination > .pageNumber > span:hover,
+.paginationWrap > .pagination > .pageNumber > span:focus,
+.paginationWrap > .pagination > .pageNumber > a:hover,
+.paginationWrap > .pagination > .pageNumber > a:focus {
+    background-color: #fff;
+    color: #434B54;
+    text-decoration: underline;
+}
+
+.paginationWrap > ul.pagination > .active > span,
+.paginationWrap > ul.pagination > .active > span:hover,
+.paginationWrap > ul.pagination > .active > span:focus {
+    background-color: #fff;
+    color: #c0c0c0;
+    text-decoration: none;
+}
+
+
