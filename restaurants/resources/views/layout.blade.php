@@ -15,7 +15,7 @@
     <nav class="my-navbar">
         <a class="my-navbar-brand" href="/">Restaurants</a>
         <div class="my-navbar-control">
-            <a href="records/create" class="btn btn-light ">探す</a>
+            <a href="records/search" class="btn btn-light ">探す</a>
             ｜
             <a href="records/create" class="btn btn-light ">投稿する</a>
             ｜

@@ -26,4 +26,9 @@ class RecordController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function getSearch()
+    {
+        return view('records/search');
+    }
 }
