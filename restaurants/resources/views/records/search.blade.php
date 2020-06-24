@@ -7,7 +7,7 @@
                 <nav class="panel panel-default">
                     <div class="panel-heading">探す</div>
                     <div class="panel-body">
-                        <form action="#" method="get" enctype="multipart/form-data">
+                        <form action="/records/index" method="get" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="message">キーワード</label>

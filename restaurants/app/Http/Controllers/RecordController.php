@@ -36,17 +36,18 @@ class RecordController extends Controller
     {
         $keyword = $request->input('keyword');
         $query = Record::query();
-        var_dump($keyword);
 
         if (!empty($keyword)) {
             $query->where('tags','like','%'.$keyword.'%')
-                  ->orWhere('message','like','%'.$keyword.'%');
+                  ->orWhere('message','like','%'.$keyword.'%')
+                  ->get();
         }
 
         $records = $query->paginate(8);
+        var_dump($records);
 
-        return redirect()->route('records.index', [
-            'record' => $records,
+        return view('records.index', [
+            'records' => $records,
         ]);
     }
 }
