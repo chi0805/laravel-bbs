@@ -17,3 +17,4 @@ Route::get('/', 'HomeControllder@index')->name('home');
 Route::get('/records/create', 'RecordController@getCreate')->name('records.create');
 Route::post('/records/create', 'RecordController@postCreate');
 Route::get('/records/search', 'RecordController@getSearch')->name('records.search');
+Route::get('/records/index', 'RecordController@getIndex')->name('records.index');

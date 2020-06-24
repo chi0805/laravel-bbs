@@ -7,11 +7,11 @@
                 <nav class="panel panel-default">
                     <div class="panel-heading">探す</div>
                     <div class="panel-body">
-                        <form action="#" method="post" enctype="multipart/form-data">
+                        <form action="#" method="get" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="message">キーワード</label>
-                                <input type="text" class="form-control" name="message" id="message" value="{{ old('message') }}"></input>
+                                <input type="text" class="form-control" name="keyword" id="keyword" value="{{ old('keyword') }}"></input>
                             </div>
                             <div class="text-right">
                                 <button type="submit" class="btn btn-secondary">検索</button>

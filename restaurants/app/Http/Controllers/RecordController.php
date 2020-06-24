@@ -31,4 +31,22 @@ class RecordController extends Controller
     {
         return view('records/search');
     }
+
+    public function getIndex(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        $query = Record::query();
+        var_dump($keyword);
+
+        if (!empty($keyword)) {
+            $query->where('tags','like','%'.$keyword.'%')
+                  ->orWhere('message','like','%'.$keyword.'%');
+        }
+
+        $records = $query->paginate(8);
+
+        return redirect()->route('records.index', [
+            'record' => $records,
+        ]);
+    }
 }
