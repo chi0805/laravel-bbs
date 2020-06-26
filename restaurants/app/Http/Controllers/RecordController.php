@@ -44,7 +44,10 @@ class RecordController extends Controller
         }
 
         $records = $query->paginate(8);
-        var_dump($records);
+        foreach ($records as $record) {
+            $tags = explode(',', $record->tags);
+            $record->tags = $tags;
+        }
 
         return view('records.index', [
             'records' => $records,
