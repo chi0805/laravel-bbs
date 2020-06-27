@@ -18,3 +18,11 @@ Route::get('/records/create', 'RecordController@getCreate')->name('records.creat
 Route::post('/records/create', 'RecordController@postCreate');
 Route::get('/records/search', 'RecordController@getSearch')->name('records.search');
 Route::get('/records/index', 'RecordController@getIndex')->name('records.index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
