@@ -15,18 +15,20 @@
     <nav class="my-navbar">
         <a class="my-navbar-brand" href="/">Restaurants</a>
         <div class="my-navbar-control">
-            <a href="/records/search" class="btn btn-light ">探す</a>
+        <a href="/records/search" class="btn btn-light ">探す</a>
+        ｜
+            @if( Auth::check() )
+                <a href="/records/create" class="btn btn-light ">投稿する</a>
+                ｜
+                <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
+                <form id="logout-form" action="#" method="POST" style="display: none;">
+                @csrf
+                </form>
             ｜
-            <a href="/records/create" class="btn btn-light ">投稿する</a>
+            @endif
+            <a class="btn btn-light" href="{{ route('login') }}">{{ __('Login') }}</a>
             ｜
-            <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
-            <form id="logout-form" action="#" method="POST" style="display: none;">
-              @csrf
-            </form>
-            ｜
-            <a class="my-navbar-item" href="#">ログイン</a>
-            ｜
-            <a class="my-navbar-item" href="#">会員登録</a>
+            <a class="btn btn-light" href="{{ route('register') }}">{{ __('Register') }}</a>
         </div>
     </nav>
 </header>
