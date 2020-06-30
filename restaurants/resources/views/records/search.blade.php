@@ -14,7 +14,7 @@
                                 <input type="text" class="form-control" name="keyword" id="keyword" value="{{ old('keyword') }}"></input>
                             </div>
                             <div class="text-right">
-                                <button type="submit" class="btn btn-secondary">検索</button>
+                                <button type="submit" class="btn attention-btn">検索</button>
                             </div>
                         </form>
                     </div>

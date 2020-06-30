@@ -15,20 +15,26 @@
     <nav class="my-navbar">
         <a class="my-navbar-brand" href="/">Restaurants</a>
         <div class="my-navbar-control">
-        <a href="/records/search" class="btn btn-light ">探す</a>
-        ｜
             @if( Auth::check() )
+                <a href="/records/search" class="btn btn-light ">探す</a>
+                ｜
                 <a href="/records/create" class="btn btn-light ">投稿する</a>
                 ｜
-                <a href="#" id="logout" class="my-navbar-item">ログアウト</a>
-                <form id="logout-form" action="#" method="POST" style="display: none;">
+                <a class="btn btn-light" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
                 </form>
             ｜
             @endif
-            <a class="btn btn-light" href="{{ route('login') }}">{{ __('Login') }}</a>
-            ｜
-            <a class="btn btn-light" href="{{ route('register') }}">{{ __('Register') }}</a>
+            @if( !Auth::check() )
+                <a class="btn btn-light" href="{{ route('login') }}">{{ __('Login') }}</a>
+                ｜
+                <a class="btn btn-light" href="{{ route('register') }}">{{ __('Register') }}</a>
+            @endif
         </div>
     </nav>
 </header>
