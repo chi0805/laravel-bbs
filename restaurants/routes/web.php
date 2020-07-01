@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeControllder@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('login', 'HomeControllder@index')->name('login');
+Route::post('logout', 'HomeControllder@index')->name('home');
 Route::get('/records/create', 'RecordController@getCreate')->name('records.create');
 Route::post('/records/create', 'RecordController@postCreate');
 Route::get('/records/search', 'RecordController@getSearch')->name('records.search');
