@@ -1,0 +1,39 @@
+<!DOCTYPE html
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryの練習</title>
+</head>
+<body>
+    <p>jQueryの練習</p>
+    <ul id="main">
+        <li class="item">0</li>
+        <li class="item">1</li>
+        <li>2</li>
+        <li>3
+            <ul id="sub">
+                <li>3-0</li>
+                <li>3-1</li>
+                <li class="item">3-2</li>
+                <li class="item">3-3</li>
+                <li>3-4</li>
+            </ul>
+        </li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        //フィルタ
+        //:eq()
+        //:gt(), :lt()
+        //:even, :odd
+        //:contains()
+        //:first, :last
+        $(function() {
+            //$('#sub > li:eq(2)').css('color', 'red');
+            //$('#sub > li:gt(1)').css('color', 'red');
+            //$('#sub > li:odd').css('color', 'red');
+            $('#sub > li:contains("4")').css('color', 'red');
+        });
+    </script>
+</body>
+</html>
